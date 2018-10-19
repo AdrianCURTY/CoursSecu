@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+mkdir Fils
+mkdir Fils/Dep1
+mkdir Fils/Dep2
+mkdir Fils/Dep2/Cat1
+mkdir Fils/Dep2/Cat2
+cd Fils/Dep2/Cat1
+touch mat1 mat2 mat3
+cd ../Cat2
+touch mat4 mat5 mat6
+cd ../Cat1
+mv * ../../Dep1/
+cp mat5 ../../Dep1
+echo "$(ls ../../Dep1)"
+
