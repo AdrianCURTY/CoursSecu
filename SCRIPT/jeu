@@ -1,0 +1,18 @@
+#! /bin/bash
+clear
+echo "Welcome to the great gamme GUESS the number"
+num=$((($RANDOM % 1000)+1))
+score=0
+found=true
+while [ "$found" = true ];
+do
+echo "Le num a trouver est: $num"
+read number
+if [ "$number" > "$num" ]; then
+echo "Too hight"
+fi
+if ["$number" < "$num" ]; then
+echp "Too low "
+fi
+done
+echo $number
