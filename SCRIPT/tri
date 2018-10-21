@@ -1,0 +1,11 @@
+#!/bin/bash
+lst="$$"
+echo "$lst"
+result[0]="${lst[0]}"
+echo "result : $result"
+for element in ${1[@]:1} 
+do
+echo "$i"
+done
+
+
