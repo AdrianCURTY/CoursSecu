@@ -6,13 +6,22 @@ score=0
 found=true
 while [ "$found" = true ];
 do
-echo "Le num a trouver est: $num"
+
 read number
-if [ "$number" > "$num" ]; then
+if (( "$number" > "$num" )) ; then
 echo "Too hight"
+score=$((score+1))
 fi
-if ["$number" < "$num" ]; then
-echp "Too low "
+if (( "$number" < "$num" )) ; then
+echo "Too low "
+score=$((score+1))
+fi
+if (( "$number" == "$num" )) ; then
+found=false
 fi
 done
-echo $number
+echo "Congratulation you find the super secret number on $score trys" 
+echo "Enter your name to save your score"
+read name
+echo "# $name                    $score #">> save.txt
+echo '#############################'>>save.txt

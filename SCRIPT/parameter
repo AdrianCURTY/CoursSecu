@@ -1,0 +1,6 @@
+#!/bin/bash
+if (( ( ($1%4==0) && ($1%100!=0) ) || ($1%400==0) )) ; then
+echo "$1 is bissextil"
+else
+echo "$1 is not bissextil"
+fi
